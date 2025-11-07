@@ -64,17 +64,17 @@ body {
 .main-header {
     background-color: #0B2440; /* اللون الداكن */
     display: flex;
-    justify-content: center; /* لتوسيط عناصر الـ nav */
+    justify-content: space-between; /* لتوسيط عناصر الـ nav */
     align-items: center;
-    padding: 40px 50px;
+    padding: 20px 50px;
     position: relative;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     z-index: 100;
 }
-
-.logo {
-    position: absolute;
-    right: 380px; /* الشعار في أقصى اليمين */
+.navbar {
+    /* للحفاظ على ترتيب العناصر أفقياً في الشاشة الكبيرة */
+    flex-grow: 1; /* للسماح للـ Navbar بأخذ المساحة المتبقية */
+    text-align: center; /* توسيط القائمة في الوسط */
 }
 .logo img {
     height: 60px;
@@ -83,6 +83,7 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
+    justify-content: center; /* توسيط الروابط داخل الـ navbar */
     gap: 30px; /* المسافة بين الروابط */
 }
 
@@ -770,5 +771,59 @@ body {
         max-width: 100%;
         height: auto;
     }
+    @media (max-width: 768px) {
+    /* ... (تعديلات الهيدر الموجودة لديكِ) ... */
+    
+    /* --------------------------------- */
+    /* 2. تعديلات أقسام البطل (Hero Sections) */
+    /* --------------------------------- */
+    
+    /* إضافة هذا الكود لترتيب النص والصورة عمودياً */
+    .hero-section .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* ضمان أن كل من النص والصورة يأخذ العرض الكامل */
+    .hero-section .text-content,
+    .hero-section .image-content {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero-section .text-content h1 {
+        font-size: 40px; 
+    }
+    .hero-section .text-content p {
+        font-size: 18px;
+    }
+    
+    .hero-section .image-content {
+        order: 2; /* لجعل الصورة أسفل النص */
+        margin-top: 30px;
+    }
+    
+    /* --------------------------------- */
+    /* 3. تعديلات شبكة البطاقات والصور */
+    /* --------------------------------- */
+    
+    .features-grid, .portfolio-grid {
+        /* تحويل العرض إلى عمود واحد */
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* --------------------------------- */
+    /* 4. تعديلات التذييل (Footer) */
+    /* --------------------------------- */
+    .main-footer .container {
+        /* تحويل العرض إلى عمود واحد ليتناسب مع الهاتف */
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+} /* نهاية Media Query */
     
 } /* نهاية Media Query */
