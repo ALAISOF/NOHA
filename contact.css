@@ -59,7 +59,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 20px 50px;
     box-shadow: 0 2px 4px rgba(6,4,7,5);
 }
 
@@ -70,7 +70,10 @@ body {
     align-items: center;
     padding: 0; 
 }
-
+.logo {
+    /* لا شيء هنا سوى خصائص العرض إذا لزم الأمر */
+    position: relative; /* تأكيد */
+}
 .navbar {
     /* للحفاظ على ترتيب العناصر أفقياً في الشاشة الكبيرة */
     flex-grow: 1; /* للسماح للـ Navbar بأخذ المساحة المتبقية */
@@ -495,6 +498,11 @@ body {
     /* إظهار زر الهامبرغر على الهواتف */
     .hamburger-menu {
         display: flex; 
+        /* تعديل موضع الزر ليكون relative للهيدر */
+        position: absolute; /* أو relative حسب الحاجة */
+        right: 20px; 
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     /* إخفاء شريط التنقل الأصلي وتعديل مكانه ليكون كقائمة جانبية */
@@ -554,6 +562,7 @@ body {
         border-bottom: none;
         position: relative; /* أو static */
         text-align: left;
+        right: auto;
     }
     
     /* إخفاء أو إعادة ترتيب بعض العناصر */
@@ -576,6 +585,9 @@ body {
 
     .main-hero p {
         font-size: 16px; /* تصغير النص الفرعي */
+        display: flex;
+        flex-direction: column; /* تحويل العرض إلى عمودي (إذا كنتِ تستخدمين Flex) */
+        gap: 30px;
     }
 
     
@@ -591,6 +603,8 @@ body {
     /* توسيط النموذج والمعلومات على الهاتف */
     .contact-form-side, .contact-info-side {
         padding: 20px 0;
+        width: 100%;
+        max-width: 100%;
     }
     
     /* --------------------------------- */
