@@ -51,6 +51,8 @@
 body {
     direction: rtl; /* اتجاه من اليمين لليسار */
     color: var(--text-dark);
+    overflow-x: hidden; /* يمنع التمرير الأفقي على مستوى جسم الصفحة */
+    width: 100%;       /* يضمن أن الجسم لا يتجاوز عرض الجهاز */
 }
 
 .container {
