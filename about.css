@@ -771,13 +771,7 @@ body {
         max-width: 100%;
         height: auto;
     }
-    @media (max-width: 768px) {
-    /* ... (تعديلات الهيدر الموجودة لديكِ) ... */
-    
-    /* --------------------------------- */
-    /* 2. تعديلات أقسام البطل (Hero Sections) */
-    /* --------------------------------- */
-    
+
     /* إضافة هذا الكود لترتيب النص والصورة عمودياً */
     .hero-section .content-container {
         flex-direction: column;
@@ -824,6 +818,6 @@ body {
         gap: 10px;
     }
 
-} /* نهاية Media Query */
+
     
 } /* نهاية Media Query */
