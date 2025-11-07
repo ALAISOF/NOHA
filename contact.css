@@ -602,7 +602,6 @@ body {
     
     /* توسيط النموذج والمعلومات على الهاتف */
     .contact-form-side, .contact-info-side {
-        padding: 20px 0;
         width: 100%;
         max-width: 100%;
     }
