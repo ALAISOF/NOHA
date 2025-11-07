@@ -46,6 +46,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
+    /* كود مؤقت لتحديد العنصر المتجاوز */
+/* هذا سيضيف حدود حمراء على كل عنصر ليظهر أين حدث التجاوز */
+  outline: 1px solid red !important;
 }
 body {
     direction: rtl; /* اتجاه من اليمين لليسار */
