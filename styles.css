@@ -393,6 +393,7 @@ body {
     /* تقليل المسافات الداخلية (Padding) وجعل النص أصغر قليلاً */
     .contact-hero, .programs-hero, .main-hero {
         padding: 60px 15px; /* تقليل المسافة العلوية والسفلية */
+        background-attachment: scroll !important; /* إلغاء التثبيت على الهاتف */
     }
 
     .contact-hero h1, .programs-hero h1, .main-hero h1 {
