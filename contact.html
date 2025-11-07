@@ -122,7 +122,20 @@
         AOS.init({
             duration: 1000, 
             once: true, 
-        });        
+        });  
+
+    // ... كود AOS هنا ...
+
+    // ==============================================
+    // كود قائمة الهامبرغر
+    // ==============================================
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const navbar = document.querySelector('.navbar');
+
+    hamburgerBtn.addEventListener('click', () => {
+        navbar.classList.toggle('active'); // تبديل كلاس 'active' للناف بار
+        hamburgerBtn.classList.toggle('active'); // تبديل كلاس 'active' للزر
+    });
     </script>
 </body>
 </html>
