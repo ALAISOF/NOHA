@@ -624,6 +624,11 @@ body {
         padding-bottom: 10px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
+    .logo {
+        text-align: center;
+        max-width: 100%; /* ضمان أن اللوغو لا يتجاوز عرض الشاشة */
+        padding-bottom: 10px;
+    }
     
     /* إخفاء أو إعادة ترتيب بعض العناصر */
     /* .search-icon, .cart-icon { display: none; } */
@@ -645,6 +650,13 @@ body {
 
     .main-hero p {
         font-size: 16px; /* تصغير النص الفرعي */
+    }
+    /* تأكدي من أن الـ Header يستخدم العرض الكامل */
+    .main-header {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px; /* ضمان وجود مسافة داخلية وعدم تمدد العناصر */
+        width: 100%; /* تأكيد العرض الكامل */
     }
 
     
@@ -675,6 +687,14 @@ body {
     h2 {
         font-size: 24px;
     }
+    /* تأكدي من عدم وجود margin سلبي هنا 
+       مثل margin-right: -20px; 
+    */
+    .navbar {
+        width: 100%;
+    }
+    
+    /* ... باقي التنسيقات ... */
     
     /* التأكد من أن الصور لا تخرج عن حواف الشاشة */
     img {
