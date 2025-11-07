@@ -59,7 +59,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 15px 50px;
     box-shadow: 0 2px 4px rgba(6,4,7,5);
 }
 
