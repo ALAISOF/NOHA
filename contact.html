@@ -22,6 +22,11 @@
                     <img src="imgs/noha_club.png" alt="NOHA Talent Center Logo">
                 </a>
             </div>
+        <button class="hamburger-menu" aria-label="Open navigation menu">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+        </button>
             <nav class="navbar">
                 <ul>
                     <li><a href="my-nohaclub-website.html">الصفحةالرئيسية</a></li>
@@ -111,7 +116,20 @@
         AOS.init({
             duration: 1000, 
             once: true, 
-        });        
+        });  
+
+    // ... كود AOS هنا ...
+
+    // ==============================================
+    // كود قائمة الهامبرغر
+    // ==============================================
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const navbar = document.querySelector('.navbar');
+
+    hamburgerBtn.addEventListener('click', () => {
+        navbar.classList.toggle('active'); // تبديل كلاس 'active' للناف بار
+        hamburgerBtn.classList.toggle('active'); // تبديل كلاس 'active' للزر
+    });
     </script>
 </body>
 </html>
