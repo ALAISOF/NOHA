@@ -3,111 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البرامج والأنشطة - NOHA مركز المواهب</title>
+    <title>البرامج والأنشطة قريباً - NOHA مركز المواهب</title>
     
-    <link rel="stylesheet" href="programs.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=amiri:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* تعريف اللون الأساسي (يمكن استبداله بلون الأزرق الداكن الخاص بك) */
+        :root {
+            --primary-blue: #0A1B4B;
+            --accent-yellow: #FFC300;
+        }
+
+        /* 1. التنسيقات العامة للصفحة */
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* لتوسيط المحتوى */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--primary-blue); /* خلفية زرقاء داكنة */
+            color: #FFFFFF; /* لون النص أبيض */
+            text-align: center;
+            overflow: hidden; /* لمنع أي شريط تمرير */
+        }
+
+        /* 2. تنسيق حاوية الرسالة */
+        .message-container {
+            max-width: 80%;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.05); /* خلفية شبه شفافة */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            
+            /* إعداد الحركة (الرسالة ستظهر بعد 0.5 ثانية) */
+            opacity: 0; /* إخفاء الرسالة في البداية */
+            transform: translateY(50px); /* تحريكها 50 بكسل للأسفل */
+            animation: slide-up 1s ease-out 0.5s forwards; /* تطبيق الحركة */
+        }
+
+        .message-container h1 {
+            font-size: 38px;
+            color: var(--accent-yellow); /* العنوان باللون الأصفر */
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .message-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* 3. زر العودة إلى الرئيسية */
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #ffda6a;
+        }
+
+        /* 4. تعريف الحركة (الـ Transition) */
+        /* Animation: slide-up (ظهور من أسفل لأعلى) */
+        @keyframes slide-up {
+            to {
+                opacity: 1; /* إظهار الرسالة بالكامل */
+                transform: translateY(0); /* إعادة تحريكها إلى موضعها الأصلي */
+            }
+        }
+    </style>
 </head>
 <body>
     
-    <div class="watermark-bg"></div> 
+    <div class="message-container">
+        <h1>مرحباً بك في صفحة الأنشطة</h1>
+        <p>
+            سيتم برمجة جميع البرامج والأنشطة الخاصة بـ NOHA في وقت لاحق بإذن الله.
+            نحن نعمل على إعداد محتوى فريد ومناسب لمواهبكم.
+        </p>
+        <p>
+            نشكر صبركم!
+        </p>
+        
+        <a href="my-nohaclub-website.html" class="back-link">العودة إلى الصفحة الرئيسية</a>
+    </div>
 
-    <header class="main-header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="imgs/noha_club.png">
-            </a>
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="my-nohaclub-website.html">الصفحة الرئيسية</a></li>
-                <li><a href="about.html">من نحن؟</a></li>
-                <li><a href="programs.html" class="active">البرامج والأنشطة</a></li>
-                <li><a href="contact.html">تواصل معنا</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="programs-hero" data-aos="fade-down">
-        <div class="container">
-            <h1>برامجنا وأنشطتنا: طريقك نحو الإبداع</h1>
-            <p>في NOHA، نقدم مجموعة متنوعة من الورش والبرامج المصممة لتنمية مهاراتك واكتشاف مواهبك في بيئة تفاعلية وممتعة. استعد للانطلاق!</p>
-        </div>
-    </main>
-    <section class="activities-section">
-        <div class="container">
-            <h2 data-aos="fade-up">ورش عمل تغطي شغفك</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">من الفنون إلى التكنولوجيا، برامجنا مصممة لتلبية اهتماماتك وتزويدك بالمهارات الأساسية. نبدأ معك من الصفر.</p>
-
-            <div class="activity-card-container">
-                
-                <div class="activity-card" data-aos="fade-right">
-                    <div class="activity-image-half">
-                        <img src="imgs/e.jpg" alt="صورة توضيحية لورشة الرسم والتصميم">
-                    </div>
-                    <div class="activity-text-half">
-                        <h3>ورشة الرسم والتصميم الرقمي</h3>
-                        <p>تعلم أساسيات الرسم، فنون الألوان، ومبادئ التصميم الجرافيكي باستخدام أحدث الأدوات الرقمية. نساعدك على تطوير أسلوبك البصري الخاص.</p>
-                        <ul>
-                            <li>أساسيات الرسم والتظليل.</li>
-                            <li>مقدمة في برامج التصميم (Photoshop/Illustrator).</li>
-                            <li>تطبيق عملي على مشاريع بسيطة.</li>
-                        </ul>
-                        <a href="contact.html" class="cta-button small-btn">سجّل الآن</a>
-                    </div>
-                </div>
-
-                <div class="activity-card reverse" data-aos="fade-left">
-                    <div class="activity-image-half">
-                        <img src="imgs/46527.jpg" alt="صورة توضيحية لورشة البرمجة والابتكار">
-                    </div>
-                    <div class="activity-text-half">
-                        <h3>البرمجة والابتكار التقني للمبتدئين</h3>
-                        <p>ابدأ رحلتك في عالم البرمجة، وتعلم كيفية بناء تطبيقات بسيطة ومشاريع روبوتية شيقة. ركز على أساسيات لغات البرمجة الأكثر طلباً.</p>
-                        <ul>
-                            <li>أساسيات لغة Python.</li>
-                            <li>مقدمة في تصميم المواقع (HTML/CSS).</li>
-                            <li>بناء مشروع تقني أول (اختياري).</li>
-                        </ul>
-                        <a href="contact.html" class="cta-button small-btn">اطّلع على التفاصيل</a>
-                    </div>
-                </div>
-
-                <div class="activity-card" data-aos="fade-right">
-                    <div class="activity-image-half">
-                        <img src="imgs/254056-P4JVLM-221.jpg" alt="صورة توضيحية لورشة القيادة والتواصل">
-                    </div>
-                    <div class="activity-text-half">
-                        <h3>ورشة القيادة ومهارات التواصل</h3>
-                        <p>نمي قدراتك القيادية، مهارات العرض والإلقاء، وكيفية العمل ضمن فريق بفعالية. هذه المهارات ضرورية للنجاح في أي مجال تختار.</p>
-                        <ul>
-                            <li>فن الإلقاء الفعال.</li>
-                            <li>أساسيات العمل الجماعي.</li>
-                            <li>التفكير النقدي وحل المشكلات.</li>
-                        </ul>
-                        <a href="contact.html" class="cta-button small-btn">سجّل الآن</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 NOHA.CLUB. جميع الحقوق محفوظة.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-            </div>
-        </div>
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000, // مدة حركة الظهور بالمللي ثانية
-        once: true, // لضمان أن الحركة تحدث مرة واحدة فقط عند التمرير
-      });
-    </script>
 </body>
 </html>

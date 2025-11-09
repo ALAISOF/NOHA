@@ -213,26 +213,8 @@ body {
     background-color: var(--bg-light);
 }
 
-.contact-grid {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
 
-.contact-form-side, .contact-info-side {
-    flex: 1;
-    background-color: var(--bg-light);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-}
 
-.contact-form-side h2, .contact-info-side h2 {
-    font-size: 32px;
-    color: var(--primary-blue);
-    margin-bottom: 30px;
-    font-weight: 900;
-}
 
 /* تنسيق النموذج */
 .main-contact-form .form-group {
@@ -432,4 +414,42 @@ body {
 @keyframes drop-down {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
+}
+/* ================================================= */
+/* تنسيقات قسم الاتصال (بعد حذف النموذج) */
+/* ================================================= */
+
+.contact-info-side {
+    /* لإلغاء أي توسيط كان موجوداً */
+    text-align: right; 
+    
+    /* توسيط المحتوى الأفقي داخل القسم */
+    max-width: 600px; /* لتركيز المحتوى في الوسط */
+    margin: 0 auto;   /* لتوسيط القسم بأكمله */
+    
+    padding: 60px 20px;
+}
+
+.contact-info-side h3 {
+    margin-top: 25px;
+    font-size: 22px;
+    color: var(--accent-yellow); /* لتلوين العناوين الفرعية */
+    border-right: 4px solid var(--accent-yellow); /* إضافة شريط جانبي أصفر */
+    padding-right: 10px;
+}
+
+.info-item p {
+    font-size: 16px;
+    color: #444; /* لون رمادي غامق للنص */
+    margin-top: 5px;
+}
+
+/* --------------------------------- */
+/* تعديل الهاتف (لتوسيط أفضل) */
+/* --------------------------------- */
+@media (max-width: 768px) {
+    .contact-info-side {
+        padding: 30px 10px;
+        max-width: 100%; 
+    }
 }
